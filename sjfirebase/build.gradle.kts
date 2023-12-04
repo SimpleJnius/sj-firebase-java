@@ -10,7 +10,8 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        minSdk = 21
+        minSdk = libs.versions.min.sdk.version.get().toInt()
+        namespace = "com.simplejnius.sjfirebase"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -34,6 +35,11 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
+    }
+    lint {
+        warningsAsErrors = true
+        abortOnError = true
+        disable.add("GradleDependency")
     }
 }
 
