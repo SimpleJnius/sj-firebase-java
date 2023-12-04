@@ -1,7 +1,7 @@
-const val PUBLISHING_GROUP = "com.ncorti.kotlin.template"
+const val PUBLISHING_GROUP = "com.github.simplejnius.sjfirebasejava"
 
 object AppCoordinates {
-    const val APP_ID = "com.ncorti.kotlin.template.app"
+    const val APP_ID = "com.github.simplejnius.sjfirebasejava.app"
 
     const val APP_VERSION_NAME = "1.0.0"
     const val APP_VERSION_CODE = 1
