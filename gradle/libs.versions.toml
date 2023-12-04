@@ -1,0 +1,43 @@
+[versions]
+agp = "8.2.0"
+androidx_activity_compose = "1.8.1"
+androidx_test = "1.5.0"
+androidx_test_ext = "1.1.5"
+appcompat = "1.6.1"
+compile_sdk_version = "34"
+compose = "1.5.4"
+compose_compilerextension = "1.5.5"
+constraint_layout = "2.1.4"
+core_ktx = "1.12.0"
+detekt = "1.23.4"
+espresso_core = "3.5.1"
+junit = "4.13.2"
+kotlin = "1.9.20"
+min_sdk_version = "21"
+target_sdk_version = "34"
+benmanesversion = "0.50.0"
+
+[libraries]
+junit = { module = "junit:junit", version.ref = "junit" }
+androidx_activity_compose = { module = "androidx.activity:activity-compose", version.ref = "androidx_activity_compose" }
+androidx_appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+androidx_constraint_layout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraint.layout" }
+androidx_core_ktx = { module = "androidx.core:core-ktx", version.ref = "core.ktx" }
+androidx_test_rules = { module = "androidx.test:rules", version.ref = "androidx.test" }
+androidx_test_runner = { module = "androidx.test:runner", version.ref = "androidx.test" }
+androidx_test_ext_junit = { module = "androidx.test.ext:junit", version.ref = "androidx.test.ext" }
+androidx_test_ext_junit_ktx = { module = "androidx.test.ext:junit-ktx", version.ref = "androidx.test.ext" }
+compose_material = { module = "androidx.compose.material:material", version.ref = "compose" }
+compose_foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
+compose_ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
+compose_ui_tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
+compose_ui_test_junit4 = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "compose" }
+compose_ui_test_manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "compose" }
+detekt_formatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt" }
+espresso_core = { module = "androidx.test.espresso:espresso-core", version.ref = "espresso.core" }
+agp = { module = "com.android.tools.build:gradle", version.ref = "agp" }
+kgp = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+
+[plugins]
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+versions = { id = "com.github.ben-manes.versions", version.ref = "benmanesversion" }
