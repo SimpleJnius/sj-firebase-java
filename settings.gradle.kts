@@ -23,3 +23,4 @@ include(
     "library-compose",
     "library-kotlin"
 )
+include(":sjfirebase")
