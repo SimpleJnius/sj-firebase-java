@@ -1,4 +1,4 @@
-const val PUBLISHING_GROUP = "com.github.simplejnius.sjfirebasejava"
+const val PUBLISHING_GROUP = "io.github.simplejnius"
 
 object AppCoordinates {
     const val APP_ID = "com.github.simplejnius.sjfirebasejava.app"
@@ -8,7 +8,7 @@ object AppCoordinates {
 }
 
 object LibraryAndroidCoordinates {
-    const val LIBRARY_VERSION = "1.0.0"
+    const val LIBRARY_VERSION = "0.5.0"
     const val LIBRARY_VERSION_CODE = 1
 }
 

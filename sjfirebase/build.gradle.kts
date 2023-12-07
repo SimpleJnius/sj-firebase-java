@@ -1,3 +1,5 @@
+version = LibraryAndroidCoordinates.LIBRARY_VERSION
+
 @Suppress("DSL_SCOPE_VIOLATION") // TODO: Remove once KTIJ-19369 is fixed
 plugins {
     id("com.android.library")
@@ -58,6 +60,7 @@ dependencies {
 
     // Add the dependency for the Firebase Authentication library
     // When using the BoM, you don't specify versions in Firebase library dependencies
+    //noinspection UseTomlInstead
     implementation("com.google.firebase:firebase-auth")
     }
 }
