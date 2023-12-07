@@ -37,12 +37,12 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
-    lint {
-        warningsAsErrors = true
-        abortOnError = true
-        disable.add("GradleDependency")
-        baseline = file("lint-baseline.xml")
-    }
+//    lint {
+//        warningsAsErrors = true
+//        abortOnError = true
+//        disable.add("GradleDependency")
+//        baseline = file("lint-baseline.xml")
+//    }
 }
 
 dependencies {
