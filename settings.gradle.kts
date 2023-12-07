@@ -13,7 +13,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = ("sjfirebasejava")
+rootProject.name = ("sj-firebase-java")
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
