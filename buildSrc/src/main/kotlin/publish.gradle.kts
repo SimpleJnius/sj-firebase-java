@@ -1,6 +1,3 @@
-import com.android.build.gradle.LibraryExtension
-import org.gradle.api.tasks.bundling.Jar
-
 /**
  * Precompiled script plugin from:
  * https://github.com/cortinico/kotlin-android-template/blob/master/buildSrc/src/main/kotlin/publish.gradle.kts
@@ -63,7 +60,7 @@ publishing {
                 if (!"USE_SNAPSHOT".byProperty.isNullOrBlank()) {
                     version = "${project.version.toString()}-SNAPSHOT"
                 }
-                description.set("A template for Kotlin Android projects")
+                description.set("Port Firebase Java SDK to Python")
                 url.set("https://github.com/SimpleJnius/sj-firebase-java/")
 
                 licenses {
