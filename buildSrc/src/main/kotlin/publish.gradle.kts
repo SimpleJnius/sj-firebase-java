@@ -48,6 +48,9 @@ publishing {
 
     publications {
         create<MavenPublication>("release") {
+            groupId = PUBLISHING_GROUP
+            artifactId = project.name
+//            version = project.version.toString()
             afterEvaluate {
                 if (plugins.hasPlugin("com.android.library")) {
                     from(components["release"])
@@ -58,7 +61,7 @@ publishing {
 
             pom {
                 if (!"USE_SNAPSHOT".byProperty.isNullOrBlank()) {
-                    version = "$version-SNAPSHOT"
+                    version = "${project.version.toString()}-SNAPSHOT"
                 }
                 description.set("A template for Kotlin Android projects")
                 url.set("https://github.com/SimpleJnius/sj-firebase-java/")
@@ -73,6 +76,8 @@ publishing {
                     developer {
                         id.set("kengoon")
                         name.set("Kenechukwu Akubue")
+                        organization.set("Simple Jnius")
+                        organizationUrl.set("https://github.com/organizations/SimpleJnius")
                     }
                 }
                 scm {
