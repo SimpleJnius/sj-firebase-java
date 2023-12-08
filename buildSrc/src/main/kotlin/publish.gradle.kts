@@ -60,6 +60,7 @@ publishing {
                 if (!"USE_SNAPSHOT".byProperty.isNullOrBlank()) {
                     version = "${project.version.toString()}-SNAPSHOT"
                 }
+                name.set(project.name)
                 description.set("Port Firebase Java SDK to Python")
                 url.set("https://github.com/SimpleJnius/sj-firebase-java/")
 
