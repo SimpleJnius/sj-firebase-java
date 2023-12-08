@@ -1,11 +1,9 @@
 package com.simplejnius.sjfirebase;
 
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.firebase.auth.AuthResult;
-
-import java.util.concurrent.Executor;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class SJFirebaseAuthEmail {
     private static final String TAG = "EmailPassword";
@@ -33,11 +31,11 @@ public class SJFirebaseAuthEmail {
     public void create_user_with_email_and_password(
             String email, String password, Object callback) {
         m_auth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener((Executor) this, (OnCompleteListener<AuthResult>) callback);
+                .addOnCompleteListener((OnCompleteListener<AuthResult>) callback);
     }
 
     public void sign_in_with_email_and_password(String email, String password, Object callback) {
         m_auth.signInWithEmailAndPassword(email, password)
-                .addOnCompleteListener((Executor) this, (OnCompleteListener<AuthResult>) callback);
+                .addOnCompleteListener((OnCompleteListener<AuthResult>) callback);
     }
 }
