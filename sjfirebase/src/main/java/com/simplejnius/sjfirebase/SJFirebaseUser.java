@@ -7,11 +7,8 @@ import com.google.firebase.auth.ActionCodeSettings;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.EmailAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseAuthRecentLoginRequiredException;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
-
-import java.util.Objects;
 
 public class SJFirebaseUser {
 
@@ -19,7 +16,7 @@ public class SJFirebaseUser {
         return FirebaseAuth.getInstance().getCurrentUser();
     }
 
-    public void update_profile(String name, String photo_url, Object callback) {
+    public void update_profile(String name, String photo_url, OnCompleteListener<Void> callback) {
         // [START update_profile]
         UserProfileChangeRequest.Builder profile_updates = new UserProfileChangeRequest.Builder();
         UserProfileChangeRequest user_profile_change_request;
@@ -35,24 +32,24 @@ public class SJFirebaseUser {
         }
 
         get_current_user().updateProfile(user_profile_change_request)
-                .addOnCompleteListener((OnCompleteListener<Void>) callback);
+                .addOnCompleteListener(callback);
         // [END update_profile]
     }
 
-    public void update_email(String email, Object callback) {
+    public void update_email(String email, OnCompleteListener<Void> callback) {
         get_current_user().updateEmail(email)
-                .addOnCompleteListener((OnCompleteListener<Void>) callback);
+                .addOnCompleteListener(callback);
     }
 
-    public void send_email_verification(Object callback) {
+    public void send_email_verification(OnCompleteListener<Void> callback) {
         // [START send_email_verification]
         get_current_user().sendEmailVerification()
-                .addOnCompleteListener((OnCompleteListener<Void>) callback);
+                .addOnCompleteListener(callback);
         // [END send_email_verification]
     }
 
     public void send_email_verification_with_continue_url(
-            String app_package_name, String url, Object callback) {
+            String app_package_name, String url, OnCompleteListener<Void> callback) {
         // [START send_email_verification_with_continue_url]
         ActionCodeSettings actionCodeSettings = ActionCodeSettings.newBuilder()
                 .setUrl(url)
@@ -62,27 +59,27 @@ public class SJFirebaseUser {
                 .build();
 
         get_current_user().sendEmailVerification(actionCodeSettings)
-                .addOnCompleteListener((OnCompleteListener<Void>) callback);
+                .addOnCompleteListener(callback);
     }
 
-    public void send_password_reset_email(String email, Object callback) {
+    public void send_password_reset_email(String email, OnCompleteListener<Void> callback) {
         // [START send_password_reset]
         FirebaseAuth auth = FirebaseAuth.getInstance();
 
         auth.sendPasswordResetEmail(email)
-                .addOnCompleteListener((OnCompleteListener<Void>) callback);
+                .addOnCompleteListener(callback);
         // [END send_password_reset]
     }
 
-    public void deleteUser(Object callback) {
+    public void deleteUser(OnCompleteListener<Void> callback) {
         // [START delete_user]
 
         get_current_user().delete()
-                .addOnCompleteListener((OnCompleteListener<Void>) callback);
+                .addOnCompleteListener(callback);
         // [END delete_user]
     }
 
-    public void reauthenticate(String email, String password, Object callback) {
+    public void reauthenticate(String email, String password, OnCompleteListener<Void> callback) {
         // [START reauthenticate]
 
         // Get auth credentials from the user for re-authentication. The example below shows
@@ -93,7 +90,7 @@ public class SJFirebaseUser {
 
         // Prompt the user to re-provide their sign-in credentials
         get_current_user().reauthenticate(credential)
-                .addOnCompleteListener((OnCompleteListener<Void>) callback);
+                .addOnCompleteListener(callback);
         // [END reauthenticate]
     }
 }

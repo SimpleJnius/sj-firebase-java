@@ -29,13 +29,14 @@ public class SJFirebaseAuthEmail {
     }
 
     public void create_user_with_email_and_password(
-            String email, String password, Object callback) {
+            String email, String password, OnCompleteListener<AuthResult> callback) {
         m_auth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener((OnCompleteListener<AuthResult>) callback);
+                .addOnCompleteListener(callback);
     }
 
-    public void sign_in_with_email_and_password(String email, String password, Object callback) {
+    public void sign_in_with_email_and_password(
+            String email, String password, OnCompleteListener<AuthResult> callback) {
         m_auth.signInWithEmailAndPassword(email, password)
-                .addOnCompleteListener((OnCompleteListener<AuthResult>) callback);
+                .addOnCompleteListener(callback);
     }
 }

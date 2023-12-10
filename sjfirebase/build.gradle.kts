@@ -54,7 +54,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
-    dependencies {
     // Import the BoM for the Firebase platform
     implementation(platform("com.google.firebase:firebase-bom:32.6.0"))
 
@@ -62,5 +61,10 @@ dependencies {
     // When using the BoM, you don't specify versions in Firebase library dependencies
     //noinspection UseTomlInstead
     implementation("com.google.firebase:firebase-auth")
-    }
+    //noinspection UseTomlInstead
+    implementation("com.google.firebase:firebase-firestore")
+    //noinspection UseTomlInstead
+    implementation("com.google.firebase:firebase-database")
+    //noinspection UseTomlInstead
+    implementation("com.google.firebase:firebase-storage")
 }
