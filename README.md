@@ -5,3 +5,13 @@
 [![MIT](https://img.shields.io/badge/license-MIT-green)](https://mit-license.org/)
 
 Port Firebase Java SDK to Python
+
+## Usage
+### Android gradle project
+```groovy
+implementation 'io.github.simplejnius:sjfirebase:0.3.0'
+```
+### Buildozer Android project
+```properties
+android.gradle_dependencies = io.github.simplejnius:sjfirebase:0.3.0
+```
