@@ -7,7 +7,7 @@ repositories {
 }
 
 dependencies {
-    //implementation(libs.kgp)
+    implementation(libs.kgp)
     implementation(libs.agp)
 }
 
