@@ -8,7 +8,7 @@ object AppCoordinates {
 }
 
 object LibraryAndroidCoordinates {
-    const val LIBRARY_VERSION = "0.3.2"
+    const val LIBRARY_VERSION = "0.3.3"
     const val LIBRARY_VERSION_CODE = 1
 }
 
