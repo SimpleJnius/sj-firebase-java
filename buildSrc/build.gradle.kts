@@ -12,16 +12,16 @@ dependencies {
     // Specify only the modules you need and the BOM will provide the versions
     // implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     // implementation("org.jetbrains.kotlin:kotlin-reflect")
-    implementation(libs.kgp)
+    // implementation(libs.kgp)
     implementation(libs.agp)
 }
 
-tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_17.toString()
-    }
-}
+// tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
+//    kotlinOptions {
+//        jvmTarget = JavaVersion.VERSION_17.toString()
+//    }
+// }
 
-kotlin {
-    jvmToolchain(17)
-}
+// kotlin {
+//    jvmToolchain(17)
+// }
