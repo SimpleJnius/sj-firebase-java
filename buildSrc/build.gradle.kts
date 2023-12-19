@@ -22,6 +22,6 @@ tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach 
     }
 }
 
-// kotlin {
-//    jvmToolchain(17)
-// }
+kotlin {
+    jvmToolchain(17)
+}
