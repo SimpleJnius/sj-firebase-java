@@ -7,11 +7,11 @@ repositories {
 }
 
 dependencies {
-    implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.22"))
+    // implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.22"))
 
     // Specify only the modules you need and the BOM will provide the versions
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    implementation("org.jetbrains.kotlin:kotlin-reflect")
+    // implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    // implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation(libs.kgp)
     implementation(libs.agp)
 }
