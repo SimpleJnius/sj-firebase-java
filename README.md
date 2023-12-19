@@ -11,9 +11,9 @@ Port Firebase Java SDK to Python
 ## Usage
 ### Android gradle project
 ```groovy
-implementation 'io.github.simplejnius:sjfirebase:0.3.0'
+implementation 'io.github.simplejnius:sjfirebase:0.3.4'
 ```
 ### Buildozer Android project
 ```properties
-android.gradle_dependencies = io.github.simplejnius:sjfirebase:0.3.0
+android.gradle_dependencies = io.github.simplejnius:sjfirebase:0.3.4
 ```
