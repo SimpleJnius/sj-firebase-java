@@ -19,12 +19,16 @@ implementation 'com.google.firebase:firebase-storage'
 implementation 'com.google.firebase:firebase-analytics'
 ```
 ### Buildozer Android project
+The current version of [python-for-android](https://github.com/kivy/python-for-android) lacks support for incorporating bom dependencies, modifying the classpath, and copying the `google-service.json`. To address this limitation, a fork of python-for-android has been developed to include these functionalities. To implement these changes in your `buildozer.spec` file, make adjustments to the specified section using the provided values below:
 ```properties
 android.gradle_dependencies = io.github.simplejnius:sjfirebase:1.0.0,
     com.google.firebase:firebase-auth,com.google.firebase:firebase-database,
     com.google.firebase:firebase-firestore,com.google.firebase:firebase-storage,
     com.google.firebase:firebase-analytics
+p4a.fork = SimpleJnius
+p4a.branch = firebase
 ```
+**Important Note:** Upon creating an Android project within your [Firebase Console](https://firebase.google.com), ensure to transfer the `google-service.json` file to the same location as your `main.py` file.
 #### Python(Buildozer) installation
 ```shell
 # pip
