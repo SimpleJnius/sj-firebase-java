@@ -12,11 +12,11 @@ import com.google.firebase.auth.UserProfileChangeRequest;
 
 public class SJFirebaseUser {
 
-    public FirebaseUser get_current_user() {
+    public static FirebaseUser get_current_user() {
         return FirebaseAuth.getInstance().getCurrentUser();
     }
 
-    public void update_profile(String name, String photo_url, OnCompleteListener<Void> callback) {
+    public static void update_profile(String name, String photo_url, OnCompleteListener<Void> callback) {
         // [START update_profile]
         UserProfileChangeRequest.Builder profile_updates = new UserProfileChangeRequest.Builder();
         UserProfileChangeRequest user_profile_change_request;
@@ -36,19 +36,19 @@ public class SJFirebaseUser {
         // [END update_profile]
     }
 
-    public void update_email(String email, OnCompleteListener<Void> callback) {
+    public static void update_email(String email, OnCompleteListener<Void> callback) {
         get_current_user().updateEmail(email)
                 .addOnCompleteListener(callback);
     }
 
-    public void send_email_verification(OnCompleteListener<Void> callback) {
+    public static void send_email_verification(OnCompleteListener<Void> callback) {
         // [START send_email_verification]
         get_current_user().sendEmailVerification()
                 .addOnCompleteListener(callback);
         // [END send_email_verification]
     }
 
-    public void send_email_verification_with_continue_url(
+    public static void send_email_verification_with_continue_url(
             String app_package_name, String url, OnCompleteListener<Void> callback) {
         // [START send_email_verification_with_continue_url]
         ActionCodeSettings actionCodeSettings = ActionCodeSettings.newBuilder()
@@ -62,7 +62,7 @@ public class SJFirebaseUser {
                 .addOnCompleteListener(callback);
     }
 
-    public void send_password_reset_email(String email, OnCompleteListener<Void> callback) {
+    public static void send_password_reset_email(String email, OnCompleteListener<Void> callback) {
         // [START send_password_reset]
         FirebaseAuth auth = FirebaseAuth.getInstance();
 
@@ -71,7 +71,7 @@ public class SJFirebaseUser {
         // [END send_password_reset]
     }
 
-    public void deleteUser(OnCompleteListener<Void> callback) {
+    public static void deleteUser(OnCompleteListener<Void> callback) {
         // [START delete_user]
 
         get_current_user().delete()
@@ -79,7 +79,7 @@ public class SJFirebaseUser {
         // [END delete_user]
     }
 
-    public void reauthenticate(String email, String password, OnCompleteListener<Void> callback) {
+    public static void reauthenticate(String email, String password, OnCompleteListener<Void> callback) {
         // [START reauthenticate]
 
         // Get auth credentials from the user for re-authentication. The example below shows

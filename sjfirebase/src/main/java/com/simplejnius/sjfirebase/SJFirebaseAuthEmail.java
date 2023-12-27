@@ -7,18 +7,18 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class SJFirebaseAuthEmail {
     private static final String TAG = "EmailPassword";
-    private FirebaseAuth m_auth;
+    private static FirebaseAuth m_auth;
 
-    public FirebaseAuth get_instance() {
+    public static FirebaseAuth get_instance() {
         m_auth = FirebaseAuth.getInstance();
         return m_auth;
     }
 
-    public String get_uid() {
+    public static String get_uid() {
         return m_auth.getUid();
     }
 
-    public boolean check_user_signed_in() {
+    public static boolean check_user_signed_in() {
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser current_user = m_auth.getCurrentUser();
         if(current_user != null){
@@ -28,13 +28,13 @@ public class SJFirebaseAuthEmail {
         return false;
     }
 
-    public void create_user_with_email_and_password(
+    public static void create_user_with_email_and_password(
             String email, String password, OnCompleteListener<AuthResult> callback) {
         m_auth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(callback);
     }
 
-    public void sign_in_with_email_and_password(
+    public static void sign_in_with_email_and_password(
             String email, String password, OnCompleteListener<AuthResult> callback) {
         m_auth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(callback);
