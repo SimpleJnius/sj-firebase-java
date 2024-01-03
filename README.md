@@ -71,6 +71,9 @@ public class com.simplejnius.sjfirebase.SJFirebaseFirestore
 ##### Visit [FirebaseFirestore Documentation](https://firebase.google.com/docs/reference/android/com/google/firebase/firestore/FirebaseFirestore) for more API
 
 #### SJFirebaseUser
+```java
+public class com.simplejnius.sjfirebase.SJFirebaseUser
+```
 Represents a user's profile information in your Firebase project's user database. 
 It also contains helper methods to change or retrieve profile information, 
 as well as to manage that user's authentication state.
@@ -80,3 +83,23 @@ as well as to manage that user's authentication state.
 - get_current_user
 - profile_change_request_builder
 ##### Visit [FirebaseUser Documentation](https://firebase.google.com/docs/reference/android/com/google/firebase/auth/FirebaseUser) for more API
+
+#### SJFirebaseStorage
+```java
+public class com.simplejnius.sjfirebase.SJFirebaseStorage
+```
+FirebaseStorage is a service that supports uploading and downloading large objects to Google Cloud 
+Storage. Pass a custom instance of [FirebaseApp]
+(https://firebase.google.com/docs/reference/android/com/google/firebase/FirebaseApp?authuser=0) 
+to get_instance which will initialize it with a 
+storage location (bucket) specified via [setStorageBucket]
+(https://firebase.google.com/docs/reference/android/com/google/firebase/FirebaseOptions.Builder?authuser=0#setStorageBucket(java.lang.String)).
+
+Otherwise, if you call getReference without a FirebaseApp, the FirebaseStorage instance will 
+initialize with the default FirebaseApp obtainable from getInstance. 
+The storage location in this case will come the JSON configuration file downloaded from the web.
+(**NOTE** ignore `getInstance` on firebase documentation and use `get_instance`).
+
+**methods**
+- get_instance
+##### Visit [FirebaseStorage Documentation](https://firebase.google.com/docs/reference/android/com/google/firebase/storage/FirebaseStorage?authuser=0) for more API
