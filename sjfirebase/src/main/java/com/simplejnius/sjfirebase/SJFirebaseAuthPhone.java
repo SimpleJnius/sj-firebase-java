@@ -53,7 +53,7 @@ public class SJFirebaseAuthPhone {
         PhoneAuthProvider.verifyPhoneNumber(options);
     }
 
-    private PhoneAuthCredential verifyPhoneNumberWithCode(String verificationId, String code) {
+    public static PhoneAuthCredential verifyPhoneNumberWithCode(String verificationId, String code) {
         return PhoneAuthProvider.getCredential(verificationId, code);
     }
 }
