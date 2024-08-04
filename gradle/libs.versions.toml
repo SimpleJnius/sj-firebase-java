@@ -11,6 +11,7 @@ constraint_layout = "2.1.4"
 core_ktx = "1.12.0"
 detekt = "1.23.4"
 espresso_core = "3.5.1"
+firebaseBom = "33.1.2"
 junit = "4.13.2"
 kotlin = "1.9.20"
 min_sdk_version = "21"
@@ -20,6 +21,7 @@ agp2 = "8.2.0"
 material = "1.9.0"
 
 [libraries]
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
 junit = { module = "junit:junit", version.ref = "junit" }
 androidx_activity_compose = { module = "androidx.activity:activity-compose", version.ref = "androidx_activity_compose" }
 androidx_appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
