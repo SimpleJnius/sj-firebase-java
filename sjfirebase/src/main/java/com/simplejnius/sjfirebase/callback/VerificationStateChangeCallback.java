@@ -9,6 +9,6 @@ import androidx.annotation.NonNull;
 
 interface VerificationStateChangeCallback {
     public void onCodeSent(@NonNull String verificationId, @NonNull PhoneAuthProvider.ForceResendingToken token);
-    public abstract void onVerificationCompleted(@NonNull PhoneAuthCredential credential);
-    public abstract void onVerificationFailed(@NonNull FirebaseException e);
+    public void onVerificationCompleted(@NonNull PhoneAuthCredential credential);
+    public void onVerificationFailed(@NonNull FirebaseException e);
 }

@@ -6,7 +6,7 @@ import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.FirebaseException;
 
 
-public abstract class VerificationStateChange extends PhoneAuthProvider.OnVerificationStateChangedCallbacks {
+public class VerificationStateChange extends PhoneAuthProvider.OnVerificationStateChangedCallbacks {
     public static VerificationStateChangeCallback callback = null;
 
     public void setCallback(VerificationStateChangeCallback callback) {
